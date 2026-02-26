@@ -102,6 +102,23 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // Touch swipe support
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  if (lbOverlay) {
+    lbOverlay.addEventListener('touchstart', e => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    lbOverlay.addEventListener('touchend', e => {
+      touchEndX = e.changedTouches[0].screenX;
+      const swipeThreshold = 50;
+      if (touchEndX < touchStartX - swipeThreshold) nextImage();
+      if (touchEndX > touchStartX + swipeThreshold) prevImage();
+    }, { passive: true });
+  }
+
   // Mobile Menu Toggle
   const mobileMenuBtn = document.getElementById('mobile-menu-btn');
   const mobileMenuClose = document.getElementById('mobile-menu-close');
