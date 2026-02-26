@@ -102,28 +102,32 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Touch swipe support
-  let touchStartX = 0;
-  let touchStartY = 0;
-  let touchEndX = 0;
-  let touchEndY = 0;
+  // Touch swipe support (High compatibility implementation)
+  let tStartX = 0;
+  let tStartY = 0;
 
   if (lbOverlay) {
-    lbOverlay.addEventListener('touchstart', e => {
-      touchStartX = e.changedTouches[0].clientX;
-      touchStartY = e.changedTouches[0].clientY;
+    lbOverlay.addEventListener('touchstart', (e) => {
+      tStartX = e.touches[0].clientX;
+      tStartY = e.touches[0].clientY;
     }, { passive: true });
 
-    lbOverlay.addEventListener('touchend', e => {
-      touchEndX = e.changedTouches[0].clientX;
-      touchEndY = e.changedTouches[0].clientY;
+    lbOverlay.addEventListener('touchmove', (e) => {
+      // Prevent background bounce/scroll which can break gesture tracking
+      if (lbOverlay.classList.contains('active')) {
+        e.preventDefault();
+      }
+    }, { passive: false });
 
-      const dx = touchEndX - touchStartX;
-      const dy = touchEndY - touchStartY;
-      const swipeThreshold = 50;
+    lbOverlay.addEventListener('touchend', (e) => {
+      const tEndX = e.changedTouches[0].clientX;
+      const tEndY = e.changedTouches[0].clientY;
 
-      // Only trigger if horizontal movement is greater than vertical movement
-      if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > swipeThreshold) {
+      const dx = tEndX - tStartX;
+      const dy = tEndY - tStartY;
+      const threshold = 30; // Lower threshold
+
+      if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > threshold) {
         if (dx < 0) nextImage();
         else prevImage();
       }
@@ -213,7 +217,9 @@ function updateLightbox() {
   const img = document.getElementById('lightbox-img');
   const counter = document.getElementById('lightbox-counter');
   if (img && counter) {
-    img.src = currentAlbum[currentIndex];
+    // Encode paths for iOS Safari compatibility
+    const rawPath = currentAlbum[currentIndex];
+    img.src = rawPath.split('/').map(part => encodeURIComponent(part)).join('/');
     counter.textContent = `${currentIndex + 1} / ${currentAlbum.length}`;
   }
 }

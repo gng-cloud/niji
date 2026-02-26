@@ -267,6 +267,8 @@ nav.scrolled {
   align-items: center;
   justify-content: center;
   touch-action: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .lightbox.active {
