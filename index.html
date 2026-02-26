@@ -29,6 +29,7 @@
                 <a href="#spirit" class="nav-link">Histoire</a>
                 <a href="#teachers" class="nav-link">Enseignants</a>
                 <a href="#training" class="nav-link">Entraînements</a>
+                <a href="#gallery" class="nav-link">Vie du Club</a>
                 <a href="#pricing" class="nav-link">Tarifs</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </div>
@@ -44,6 +45,7 @@
         <a href="#spirit" class="mobile-menu-link">Histoire</a>
         <a href="#teachers" class="mobile-menu-link">Enseignants</a>
         <a href="#training" class="mobile-menu-link">Entraînements</a>
+        <a href="#gallery" class="mobile-menu-link">Vie du Club</a>
         <a href="#pricing" class="mobile-menu-link">Tarifs</a>
         <a href="#contact" class="mobile-menu-link">Contact</a>
     </div>
@@ -189,6 +191,45 @@
             </div>
         </section>
 
+        <!-- Gallery Section -->
+        <section id="gallery" class="py-32 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-20 reveal">
+                    <span
+                        class="text-[var(--color-cyan)] font-bold tracking-[0.5em] uppercase text-sm mb-4 block">Photos</span>
+                    <h2 class="section-title">Vie du Club</h2>
+                    <p class="text-[var(--color-text-secondary)] italic">Découvrez nos moments forts, nos stages et nos
+                        compétitions.</p>
+                </div>
+
+                <div class="gallery-grid reveal">
+                    <!-- Stage S Fleury 2024 Album -->
+                    <div class="album-card" data-album="fleury2024">
+                        <img src="images/stage s fleury 2024/145DA774-4A86-40DC-ADCB-D09A34B6E892_1_102_o.jpeg"
+                            alt="Stage S Fleury 2024" class="album-image">
+                        <div class="album-info">
+                            <h3 class="album-title">Stage S Fleury 2024</h3>
+                            <p class="text-[var(--color-text-secondary)] text-sm uppercase tracking-widest">60 Photos
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lightbox -->
+        <div id="lightbox" class="lightbox">
+            <div class="lightbox-close" id="lightbox-close"><i class="fas fa-times"></i></div>
+            <div class="lightbox-nav lightbox-prev" id="lightbox-prev"><i class="fas fa-chevron-left"></i></div>
+            <div class="lightbox-nav lightbox-next" id="lightbox-next"><i class="fas fa-chevron-right"></i></div>
+
+            <div class="lightbox-content">
+                <img id="lightbox-img" class="lightbox-img" src="" alt="Gallery Image">
+            </div>
+
+            <div id="lightbox-counter" class="lightbox-counter font-japanese">1 / 1</div>
+        </div>
+
         <!-- Pricing Section -->
         <section id="pricing" class="py-32 bg-[var(--color-bg-secondary)] border-y border-[var(--color-border)]">
             <div class="container mx-auto px-6">
@@ -329,92 +370,7 @@
         </footer>
 
         <!-- Scripts -->
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                // Navigation scroll effect
-                const nav = document.querySelector('nav');
-                window.addEventListener('scroll', () => {
-                    if (window.scrollY > 50) {
-                        nav.classList.add('scrolled');
-                        nav.classList.remove('py-6');
-                    } else {
-                        nav.classList.remove('scrolled');
-                        nav.classList.add('py-6');
-                    }
-                });
-
-                // Reveal animations
-                const observerOptions = {
-                    threshold: 0.15,
-                    rootMargin: '0px 0px -50px 0px'
-                };
-
-                const revealObserver = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('active');
-                        }
-                    });
-                }, observerOptions);
-
-                document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-
-                // Smooth scroll for anchors
-                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                    anchor.addEventListener('click', function (e) {
-                        e.preventDefault();
-                        const target = document.querySelector(this.getAttribute('href'));
-                        if (target) {
-                            window.scrollTo({
-                                top: target.offsetTop - 80,
-                                behavior: 'smooth'
-                            });
-                        }
-                    });
-                });
-
-                // Form validation
-                const form = document.getElementById('contact-form');
-                if (form) {
-                    form.addEventListener('submit', (e) => {
-                        e.preventDefault();
-                        // Mailto handling logic remains same as per requirements
-                        const formData = new FormData(form);
-                        const subject = `Message Niji Kendoka de ${formData.get('name')}`;
-                        const body = `Message:\n${formData.get('message')}\n\nDe: ${formData.get('name')} (${formData.get('email')})`;
-                        window.location.href = `mailto:contact@nijikendoka.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-                        alert("Merci ! Votre application d'email va s'ouvrir.");
-                    });
-                }
-
-                // Mobile Menu Toggle
-                const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-                const mobileMenuClose = document.getElementById('mobile-menu-close');
-                const mobileMenu = document.getElementById('mobile-menu');
-                const mobileLinks = document.querySelectorAll('.mobile-menu-link');
-
-                const toggleMenu = (e) => {
-                    if (e) e.preventDefault();
-                    if (mobileMenu) {
-                        mobileMenu.classList.toggle('active');
-                        document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
-                    }
-                };
-
-                if (mobileMenuBtn) {
-                    mobileMenuBtn.addEventListener('click', toggleMenu);
-                    mobileMenuBtn.addEventListener('touchstart', toggleMenu, { passive: false });
-                }
-                if (mobileMenuClose) {
-                    mobileMenuClose.addEventListener('click', toggleMenu);
-                    mobileMenuClose.addEventListener('touchstart', toggleMenu, { passive: false });
-                }
-
-                mobileLinks.forEach(link => {
-                    link.addEventListener('click', toggleMenu);
-                });
-            });
-        </script>
+        <script src="script.js"></script>
 </body>
 
 </html>
