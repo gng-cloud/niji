@@ -23,6 +23,8 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.6;
+  overflow-x: hidden;
+  /* Prevents global horizontal scroll */
 }
 
 .font-japanese {
@@ -70,6 +72,47 @@ nav.scrolled {
 .nav-link:hover {
   color: var(--color-cyan);
 }
+
+/* Mobile Menu Overlay */
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-bg-primary);
+  z-index: 1002;
+  /* Higher than button */
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-menu-overlay.active {
+  display: flex !important;
+}
+
+
+.mobile-menu-link {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 1.5rem 0;
+  color: var(--color-text-primary);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.mobile-menu-close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
 
 /* Buttons */
 .btn-primary {
@@ -181,4 +224,68 @@ textarea:focus {
   background-color: var(--color-bg-primary);
   border-color: var(--color-cyan);
   outline: none;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.75rem !important;
+    margin-bottom: 2rem;
+  }
+
+  .hero-title {
+    font-size: 10vw !important;
+    line-height: 1.2 !important;
+    letter-spacing: 0.05em !important;
+    padding: 0 1rem;
+  }
+
+  .hero-subtitle {
+    font-size: 4vw !important;
+    letter-spacing: 0.2em !important;
+  }
+
+  .glass {
+    padding: 1.5rem 1rem !important;
+    max-width: 90vw;
+  }
+
+  .table-container {
+    display: block;
+    width: 100%;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 2rem;
+    border: 1px solid var(--color-border);
+  }
+
+  .training-table {
+    min-width: 600px;
+  }
+
+  .training-table th,
+  .training-table td {
+    padding: 0.6rem 0.4rem !important;
+    font-size: 0.75rem !important;
+  }
+
+  .card {
+    padding: 1.5rem !important;
+  }
+
+  #mobile-menu-btn {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: white;
+    border: 1px solid var(--color-border);
+    border-radius: 50%;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1001;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
 }

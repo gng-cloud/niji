@@ -32,9 +32,21 @@
                 <a href="#pricing" class="nav-link">Tarifs</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </div>
-            <button class="md:hidden text-[var(--color-text-primary)]"><i class="fas fa-bars"></i></button>
+            <button id="mobile-menu-btn" class="md:hidden text-[var(--color-text-primary)] text-2xl"><i
+                    class="fas fa-bars"></i></button>
         </div>
     </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="mobile-menu-overlay">
+        <div id="mobile-menu-close" class="mobile-menu-close text-[var(--color-text-secondary)]"><i
+                class="fas fa-times"></i></div>
+        <a href="#spirit" class="mobile-menu-link">Histoire</a>
+        <a href="#teachers" class="mobile-menu-link">Enseignants</a>
+        <a href="#training" class="mobile-menu-link">Entraînements</a>
+        <a href="#pricing" class="mobile-menu-link">Tarifs</a>
+        <a href="#contact" class="mobile-menu-link">Contact</a>
+    </div>
 
     <!-- Hero Section -->
     <section class="relative h-screen flex items-center justify-center overflow-hidden bg-gray-100">
@@ -47,10 +59,12 @@
             <div class="glass p-16 max-w-3xl mx-auto reveal active">
                 <span class="text-[var(--color-cyan)] font-bold tracking-[0.5em] uppercase text-sm mb-4 block">Dojo de
                     Kendo</span>
-                <h1 class="text-6xl md:text-8xl font-japanese font-bold mb-6 text-[var(--color-text-primary)]">Niji
+                <h1
+                    class="text-6xl md:text-8xl font-japanese font-bold mb-6 text-[var(--color-text-primary)] hero-title">
+                    Niji
                     Kendoka</h1>
                 <p
-                    class="text-xl md:text-2xl font-light tracking-[0.3em] uppercase mb-10 text-[var(--color-text-secondary)]">
+                    class="text-xl md:text-2xl font-light tracking-[0.3em] uppercase mb-10 text-[var(--color-text-secondary)] hero-subtitle">
                     L'Art du Sabre</p>
                 <a href="#spirit" class="btn-primary">Découvrir le club</a>
             </div>
@@ -136,7 +150,7 @@
                         Gymnase Pierre de Coubertin, 4 rue Léon Blum, 95400 Villiers-le-bel
                     </p>
                 </div>
-                <div class="max-w-5xl mx-auto shadow-sm reveal">
+                <div class="max-w-5xl mx-auto shadow-sm reveal table-container">
                     <table class="training-table">
                         <thead>
                             <tr>
@@ -372,6 +386,33 @@
                         alert("Merci ! Votre application d'email va s'ouvrir.");
                     });
                 }
+
+                // Mobile Menu Toggle
+                const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+                const mobileMenuClose = document.getElementById('mobile-menu-close');
+                const mobileMenu = document.getElementById('mobile-menu');
+                const mobileLinks = document.querySelectorAll('.mobile-menu-link');
+
+                const toggleMenu = (e) => {
+                    if (e) e.preventDefault();
+                    if (mobileMenu) {
+                        mobileMenu.classList.toggle('active');
+                        document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+                    }
+                };
+
+                if (mobileMenuBtn) {
+                    mobileMenuBtn.addEventListener('click', toggleMenu);
+                    mobileMenuBtn.addEventListener('touchstart', toggleMenu, { passive: false });
+                }
+                if (mobileMenuClose) {
+                    mobileMenuClose.addEventListener('click', toggleMenu);
+                    mobileMenuClose.addEventListener('touchstart', toggleMenu, { passive: false });
+                }
+
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', toggleMenu);
+                });
             });
         </script>
 </body>
