@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif+JP:wght@400;700&display=swap');
+
+:root {
+  --color-bg-primary: #FFFFFF;
+  --color-bg-secondary: #F8F9FA;
+  --color-bg-tertiary: #E9ECEF;
+  --color-text-primary: #1A1A1B;
+  --color-text-secondary: #4A4A4B;
+  --color-cyan: #65C3D5;
+  --color-yellow: #FCEE21;
+  --color-glass: rgba(255, 255, 255, 0.8);
+  --color-border: rgba(0, 0, 0, 0.1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.font-japanese {
+  font-family: 'Noto Serif JP', serif;
+}
+
+/* Glassmorphism (Light) */
+.glass {
+  background: var(--color-glass);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Card Style */
+.card {
+  background-color: var(--color-bg-primary);
+  border: 1px solid var(--color-border);
+  padding: 2.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Navigation */
+nav.scrolled {
+  background-color: var(--color-bg-primary);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+  padding: 1rem 0 !important;
+}
+
+.nav-link {
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--color-cyan);
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--color-cyan);
+  color: #FFFFFF;
+  padding: 0.875rem 2.5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 700;
+  display: inline-block;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-text-primary);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(101, 195, 213, 0.4);
+}
+
+/* Section Titles */
+.section-title {
+  font-size: 2.5rem;
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -0.75rem;
+  left: 0;
+  width: 3.5rem;
+  height: 0.25rem;
+  background-color: var(--color-yellow);
+}
+
+/* Animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Training Table */
+.training-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--color-bg-primary);
+}
+
+.training-table th,
+.training-table td {
+  border: 1px solid var(--color-border);
+  padding: 1.25rem;
+  text-align: center;
+}
+
+.training-table th {
+  background-color: var(--color-bg-secondary);
+  font-family: 'Noto Serif JP', serif;
+  color: var(--color-cyan);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Teacher List Styles */
+.teacher-list {
+  list-style: none;
+  padding: 0;
+}
+
+.teacher-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.teacher-list li::before {
+  content: '•';
+  color: var(--color-cyan);
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+
+/* Forms */
+input,
+textarea {
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-primary);
+}
+
+input:focus,
+textarea:focus {
+  background-color: var(--color-bg-primary);
+  border-color: var(--color-cyan);
+  outline: none;
+}
