@@ -104,18 +104,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Touch swipe support
   let touchStartX = 0;
+  let touchStartY = 0;
   let touchEndX = 0;
+  let touchEndY = 0;
 
   if (lbOverlay) {
     lbOverlay.addEventListener('touchstart', e => {
-      touchStartX = e.changedTouches[0].screenX;
+      touchStartX = e.changedTouches[0].clientX;
+      touchStartY = e.changedTouches[0].clientY;
     }, { passive: true });
 
     lbOverlay.addEventListener('touchend', e => {
-      touchEndX = e.changedTouches[0].screenX;
+      touchEndX = e.changedTouches[0].clientX;
+      touchEndY = e.changedTouches[0].clientY;
+
+      const dx = touchEndX - touchStartX;
+      const dy = touchEndY - touchStartY;
       const swipeThreshold = 50;
-      if (touchEndX < touchStartX - swipeThreshold) nextImage();
-      if (touchEndX > touchStartX + swipeThreshold) prevImage();
+
+      // Only trigger if horizontal movement is greater than vertical movement
+      if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > swipeThreshold) {
+        if (dx < 0) nextImage();
+        else prevImage();
+      }
     }, { passive: true });
   }
 
