@@ -27,6 +27,7 @@
             </a>
             <div class="hidden md:flex space-x-10">
                 <a href="#spirit" class="nav-link">Histoire</a>
+                <a href="#disciplines" class="nav-link">Disciplines</a>
                 <a href="#teachers" class="nav-link">Enseignants</a>
                 <a href="#training" class="nav-link">Entraînements</a>
                 <a href="#gallery" class="nav-link">Vie du Club</a>
@@ -43,6 +44,7 @@
         <div id="mobile-menu-close" class="mobile-menu-close text-[var(--color-text-secondary)]"><i
                 class="fas fa-times"></i></div>
         <a href="#spirit" class="mobile-menu-link">Histoire</a>
+        <a href="#disciplines" class="mobile-menu-link">Disciplines</a>
         <a href="#teachers" class="mobile-menu-link">Enseignants</a>
         <a href="#training" class="mobile-menu-link">Entraînements</a>
         <a href="#gallery" class="mobile-menu-link">Vie du Club</a>
@@ -114,263 +116,360 @@
                 </div>
             </div>
         </div>
-        <!-- Teachers Section -->
-        <section id="teachers" class="py-32 bg-[var(--color-bg-secondary)] border-y border-[var(--color-border)]">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-20 reveal">
-                    <h2 class="section-title">Nos Enseignants</h2>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
-                    <div class="card reveal bg-white">
-                        <h3 class="text-2xl font-japanese font-bold mb-2">Christian HOSSAINE</h3>
-                        <p class="text-[var(--color-cyan)] font-bold mb-4 uppercase text-sm tracking-widest">4ème dan
-                            Kendo, 3ème dan Iaïdo, BFEK</p>
-                        <p class="text-[var(--color-text-secondary)]">Responsable technique et enseignant principal.</p>
-                    </div>
-                    <div class="card reveal bg-white">
-                        <h3 class="text-2xl font-japanese font-bold mb-2">L'Equipe Enseignante</h3>
-                        <p class="text-[var(--color-cyan)] font-bold mb-4 uppercase text-sm tracking-widest">3ème dan
-                            Kendo, CFEB</p>
-                        <ul class="teacher-list text-[var(--color-text-secondary)]">
-                            <li>Haikal HADIJI</li>
-                            <li>Jordan MOHAMAD</li>
-                            <li>Mathieu CAFFE</li>
-                            <li>Gilbert NGUYEN</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
+    </section>
 
-        <!-- Training Table -->
-        <section id="training" class="py-32 bg-white">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-12 reveal">
-                    <h2 class="section-title">Horaires & Lieu</h2>
-                    <p class="text-[var(--color-text-secondary)] mb-4">
-                        <i class="fas fa-map-marker-alt mr-2 text-[var(--color-cyan)]"></i>
-                        Gymnase Pierre de Coubertin, 4 rue Léon Blum, 95400 Villiers-le-bel
+    <!-- Disciplines Expansion -->
+    <section id="disciplines" class="py-32 bg-gray-50 border-t border-[var(--color-border)]">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-24 reveal">
+                <span
+                    class="text-[var(--color-cyan)] font-bold tracking-[0.5em] uppercase text-sm mb-4 block">Immersion</span>
+                <h2 class="section-title">Les Disciplines</h2>
+                <div class="w-24 h-1 bg-[var(--color-cyan)] mx-auto"></div>
+            </div>
+
+            <!-- Kendo -->
+            <div class="discipline-row reveal">
+                <div class="discipline-image">
+                    <img src="https://images.unsplash.com/photo-1549497531-ec7b381ec7b3?auto=format&fit=crop&q=80&w=1000"
+                        alt="Kendo Practice">
+                </div>
+                <div class="discipline-text">
+                    <h3 class="text-4xl font-japanese font-bold mb-6">Kendo : La Voie du Sabre</h3>
+                    <p class="text-[var(--color-text-secondary)] text-lg leading-relaxed mb-6">
+                        Le Kendo est l'héritier direct des écoles d'escrime des anciens Samouraïs (*Kenjutsu*). Plus
+                        qu'un sport, c'est une discipline qui forge le corps et l'esprit à travers la pratique du sabre
+                        japonais.
                     </p>
-                </div>
-                <div class="max-w-5xl mx-auto shadow-sm reveal table-container">
-                    <table class="training-table">
-                        <thead>
-                            <tr>
-                                <th>Section</th>
-                                <th>Lundi</th>
-                                <th>Mercredi</th>
-                                <th>Vendredi</th>
-                                <th>Samedi</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="font-bold">Enfants</td>
-                                <td class="bg-gray-50"></td>
-                                <td class="font-medium">18h00 - 19h15</td>
-                                <td class="bg-gray-50"></td>
-                                <td class="font-medium">15h45 - 17h15</td>
-                            </tr>
-                            <tr>
-                                <td class="font-bold">Kendo No Kata</td>
-                                <td class="font-medium">19h15 - 20h15</td>
-                                <td class="font-medium">19h30 - 20h15</td>
-                                <td class="font-medium">19h15 - 20h15</td>
-                                <td class="font-medium">14h00 - 15h30</td>
-                            </tr>
-                            <tr>
-                                <td class="font-bold">Adultes</td>
-                                <td class="font-medium">20h30 - 22h00</td>
-                                <td class="font-medium">20h30 - 22h00</td>
-                                <td class="font-medium">20h30 - 22h00</td>
-                                <td class="font-medium">15h45 - 17h15</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-
-        <!-- Gallery Section -->
-        <section id="gallery" class="py-32 bg-white">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-20 reveal">
-                    <span
-                        class="text-[var(--color-cyan)] font-bold tracking-[0.5em] uppercase text-sm mb-4 block">Photos</span>
-                    <h2 class="section-title">Vie du Club</h2>
-                    <p class="text-[var(--color-text-secondary)] italic">Découvrez nos moments forts, nos stages et nos
-                        compétitions.</p>
-                </div>
-
-                <div class="gallery-grid reveal">
-                    <!-- Stage S Fleury 2024 Album -->
-                    <div class="album-card" data-album="fleury2024">
-                        <img src="images/stage s fleury 2024/145DA774-4A86-40DC-ADCB-D09A34B6E892_1_102_o.jpeg"
-                            alt="Stage S Fleury 2024" class="album-image">
-                        <div class="album-info">
-                            <h3 class="album-title">Stage S Fleury 2024</h3>
-                            <p class="text-[var(--color-text-secondary)] text-sm uppercase tracking-widest">60 Photos
-                            </p>
+                    <div class="discipline-list">
+                        <div class="discipline-list-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong class="text-[var(--color-text-primary)]">Philosophie</strong>
+                                <p class="text-sm text-[var(--color-text-secondary)]">Recherche de l'unité entre
+                                    l'esprit, le sabre et le corps (*Shin-Ki-Ryoku-Itchi*).</p>
+                            </div>
+                        </div>
+                        <div class="discipline-list-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong class="text-[var(--color-text-primary)]">Pratique</strong>
+                                <p class="text-sm text-[var(--color-text-secondary)]">Combat avec le *Shinai* (sabre de
+                                    bambou) et le *Bogu* (armure protectrice).</p>
+                            </div>
+                        </div>
+                        <div class="discipline-list-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong class="text-[var(--color-text-primary)]">Étiquette</strong>
+                                <p class="text-sm text-[var(--color-text-secondary)]">Le respect du partenaire et de
+                                    l'adversaire est fondamental (*Reigi*).</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <!-- Lightbox -->
-        <div id="lightbox" class="lightbox">
-            <div class="lightbox-close" id="lightbox-close"><i class="fas fa-times"></i></div>
-            <div class="lightbox-nav lightbox-prev" id="lightbox-prev"><i class="fas fa-chevron-left"></i></div>
-            <div class="lightbox-nav lightbox-next" id="lightbox-next"><i class="fas fa-chevron-right"></i></div>
+            <!-- Iaido -->
+            <div class="discipline-row reveal">
+                <div class="discipline-image">
+                    <img src="https://images.unsplash.com/photo-1555597673-b21d5c935865?auto=format&fit=crop&q=80&w=1000"
+                        alt="Iaido Practice">
+                </div>
+                <div class="discipline-text">
+                    <h3 class="text-4xl font-japanese font-bold mb-6">Iaido : L'Art de Dégainer</h3>
+                    <p class="text-[var(--color-text-secondary)] text-lg leading-relaxed mb-6">
+                        Le Iaido est l'art de dégainer le sabre, de trancher et de rengainer en un seul mouvement
+                        fluide. C'est une discipline solitaire axée sur la concentration et la maîtrise de soi face à un
+                        adversaire imaginaire.
+                    </p>
+                    <div class="discipline-list">
+                        <div class="discipline-list-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong class="text-[var(--color-text-primary)]">Origines</strong>
+                                <p class="text-sm text-[var(--color-text-secondary)]">Fondé sur la réactivité immédiate
+                                    face à une attaque surprise.</p>
+                            </div>
+                        </div>
+                        <div class="discipline-list-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong class="text-[var(--color-text-primary)]">Technique</strong>
+                                <p class="text-sm text-[var(--color-text-secondary)]">Étude de *Kata* avec un *Iaito*
+                                    (sabre non tranchant) ou un *Bokken*.</p>
+                            </div>
+                        </div>
+                        <div class="discipline-list-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong class="text-[var(--color-text-primary)]">Introspection</strong>
+                                <p class="text-sm text-[var(--color-text-secondary)]">Une recherche de la paix
+                                    intérieure et de la justesse du geste (*Mushin*).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <div class="lightbox-content">
-                <img id="lightbox-img" class="lightbox-img" src="" alt="Gallery Image">
+    <!-- Teachers Section -->
+    <section id="teachers" class="py-32 bg-[var(--color-bg-secondary)] border-y border-[var(--color-border)]">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20 reveal">
+                <h2 class="section-title">Nos Enseignants</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+                <div class="card reveal bg-white">
+                    <h3 class="text-2xl font-japanese font-bold mb-2">Christian HOSSAINE</h3>
+                    <p class="text-[var(--color-cyan)] font-bold mb-4 uppercase text-sm tracking-widest">4ème dan
+                        Kendo, 3ème dan Iaïdo, BFEK</p>
+                    <p class="text-[var(--color-text-secondary)]">Responsable technique et enseignant principal.</p>
+                </div>
+                <div class="card reveal bg-white">
+                    <h3 class="text-2xl font-japanese font-bold mb-2">L'Equipe Enseignante</h3>
+                    <p class="text-[var(--color-cyan)] font-bold mb-4 uppercase text-sm tracking-widest">3ème dan
+                        Kendo, CFEB</p>
+                    <ul class="teacher-list text-[var(--color-text-secondary)]">
+                        <li>Haikal HADIJI</li>
+                        <li>Jordan MOHAMAD</li>
+                        <li>Mathieu CAFFE</li>
+                        <li>Gilbert NGUYEN</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Training Table -->
+    <section id="training" class="py-32 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12 reveal">
+                <h2 class="section-title">Horaires & Lieu</h2>
+                <p class="text-[var(--color-text-secondary)] mb-4">
+                    <i class="fas fa-map-marker-alt mr-2 text-[var(--color-cyan)]"></i>
+                    Gymnase Pierre de Coubertin, 4 rue Léon Blum, 95400 Villiers-le-bel
+                </p>
+            </div>
+            <div class="max-w-5xl mx-auto shadow-sm reveal table-container">
+                <table class="training-table">
+                    <thead>
+                        <tr>
+                            <th>Section</th>
+                            <th>Lundi</th>
+                            <th>Mercredi</th>
+                            <th>Vendredi</th>
+                            <th>Samedi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="font-bold">Enfants</td>
+                            <td class="bg-gray-50"></td>
+                            <td class="font-medium">18h00 - 19h15</td>
+                            <td class="bg-gray-50"></td>
+                            <td class="font-medium">15h45 - 17h15</td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold">Kendo No Kata</td>
+                            <td class="font-medium">19h15 - 20h15</td>
+                            <td class="font-medium">19h30 - 20h15</td>
+                            <td class="font-medium">19h15 - 20h15</td>
+                            <td class="font-medium">14h00 - 15h30</td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold">Adultes</td>
+                            <td class="font-medium">20h30 - 22h00</td>
+                            <td class="font-medium">20h30 - 22h00</td>
+                            <td class="font-medium">20h30 - 22h00</td>
+                            <td class="font-medium">15h45 - 17h15</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-32 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20 reveal">
+                <span
+                    class="text-[var(--color-cyan)] font-bold tracking-[0.5em] uppercase text-sm mb-4 block">Photos</span>
+                <h2 class="section-title">Vie du Club</h2>
+                <p class="text-[var(--color-text-secondary)] italic">Découvrez nos moments forts, nos stages et nos
+                    compétitions.</p>
             </div>
 
-            <div id="lightbox-counter" class="lightbox-counter font-japanese">1 / 1</div>
+            <div class="gallery-grid reveal">
+                <!-- Stage S Fleury 2024 Album -->
+                <div class="album-card" data-album="fleury2024">
+                    <img src="images/stage s fleury 2024/145DA774-4A86-40DC-ADCB-D09A34B6E892_1_102_o.jpeg"
+                        alt="Stage S Fleury 2024" class="album-image">
+                    <div class="album-info">
+                        <h3 class="album-title">Stage S Fleury 2024</h3>
+                        <p class="text-[var(--color-text-secondary)] text-sm uppercase tracking-widest">60 Photos
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-close" id="lightbox-close"><i class="fas fa-times"></i></div>
+        <div class="lightbox-nav lightbox-prev" id="lightbox-prev"><i class="fas fa-chevron-left"></i></div>
+        <div class="lightbox-nav lightbox-next" id="lightbox-next"><i class="fas fa-chevron-right"></i></div>
+
+        <div class="lightbox-content">
+            <img id="lightbox-img" class="lightbox-img" src="" alt="Gallery Image">
         </div>
 
-        <!-- Pricing Section -->
-        <section id="pricing" class="py-32 bg-[var(--color-bg-secondary)] border-y border-[var(--color-border)]">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-20 reveal">
-                    <h2 class="section-title">Tarifs 2025/2026</h2>
-                    <p class="text-[var(--color-text-secondary)] italic">Cotisation + Licence FFJDA de 56€ incluse</p>
+        <div id="lightbox-counter" class="lightbox-counter font-japanese">1 / 1</div>
+    </div>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-32 bg-[var(--color-bg-secondary)] border-y border-[var(--color-border)]">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20 reveal">
+                <h2 class="section-title">Tarifs 2025/2026</h2>
+                <p class="text-[var(--color-text-secondary)] italic">Cotisation + Licence FFJDA de 56€ incluse</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="card reveal bg-white text-center">
+                    <h3 class="text-xl font-bold mb-4">Adultes</h3>
+                    <div class="text-4xl font-japanese font-bold text-[var(--color-cyan)] mb-4">226 €</div>
+                    <p class="text-sm text-gray-400 uppercase tracking-widest">18 ans et plus</p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                    <div class="card reveal bg-white text-center">
-                        <h3 class="text-xl font-bold mb-4">Adultes</h3>
-                        <div class="text-4xl font-japanese font-bold text-[var(--color-cyan)] mb-4">226 €</div>
-                        <p class="text-sm text-gray-400 uppercase tracking-widest">18 ans et plus</p>
-                    </div>
-                    <div class="card reveal bg-white text-center border-[var(--color-yellow)]">
-                        <h3 class="text-xl font-bold mb-4">Étudiants / Ados</h3>
-                        <div class="text-4xl font-japanese font-bold text-[var(--color-cyan)] mb-4">166 €</div>
-                        <p class="text-sm text-gray-400 uppercase tracking-widest">13-17 ans / DE</p>
-                    </div>
-                    <div class="card reveal bg-white text-center">
-                        <h3 class="text-xl font-bold mb-4">Enfants</h3>
-                        <div class="text-4xl font-japanese font-bold text-[var(--color-cyan)] mb-4">136 €</div>
-                        <p class="text-sm text-gray-400 uppercase tracking-widest">6-12 ans</p>
-                    </div>
-                    <div class="card reveal bg-white text-center">
-                        <h3 class="text-xl font-bold mb-4">Éveil</h3>
-                        <div class="text-4xl font-japanese font-bold text-[var(--color-cyan)] mb-4">76 €</div>
-                        <p class="text-sm text-gray-400 uppercase tracking-widest">4-5 ans</p>
-                    </div>
+                <div class="card reveal bg-white text-center border-[var(--color-yellow)]">
+                    <h3 class="text-xl font-bold mb-4">Étudiants / Ados</h3>
+                    <div class="text-4xl font-japanese font-bold text-[var(--color-cyan)] mb-4">166 €</div>
+                    <p class="text-sm text-gray-400 uppercase tracking-widest">13-17 ans / DE</p>
                 </div>
-                <div
-                    class="mt-12 p-8 bg-white border border-[var(--color-yellow)] text-center max-w-3xl mx-auto reveal">
-                    <p class="text-lg font-medium">
-                        <i class="fas fa-users-cog mr-2 text-[var(--color-yellow)]"></i>
-                        Tarif dégressif pour les familles : <span class="font-bold">-50% sur le 2ème enfant</span>,
-                        cotisation offerte dès le 3ème.
-                    </p>
+                <div class="card reveal bg-white text-center">
+                    <h3 class="text-xl font-bold mb-4">Enfants</h3>
+                    <div class="text-4xl font-japanese font-bold text-[var(--color-cyan)] mb-4">136 €</div>
+                    <p class="text-sm text-gray-400 uppercase tracking-widest">6-12 ans</p>
+                </div>
+                <div class="card reveal bg-white text-center">
+                    <h3 class="text-xl font-bold mb-4">Éveil</h3>
+                    <div class="text-4xl font-japanese font-bold text-[var(--color-cyan)] mb-4">76 €</div>
+                    <p class="text-sm text-gray-400 uppercase tracking-widest">4-5 ans</p>
                 </div>
             </div>
-        </section>
-
-        <!-- Facebook CTA -->
-        <section id="community" class="py-32 bg-white">
-            <div class="container mx-auto px-6 text-center">
-                <div
-                    class="max-w-4xl mx-auto p-12 border border-[var(--color-border)] bg-[var(--color-bg-secondary)] reveal">
-                    <i class="fab fa-facebook text-5xl text-[#1877F2] mb-6"></i>
-                    <h2 class="text-3xl font-japanese font-bold mb-4 text-[var(--color-text-primary)]">Follow our
-                        community
-                    </h2>
-                    <p class="text-lg text-[var(--color-text-secondary)] mb-10">Rejoignez notre groupe Facebook pour
-                        suivre
-                        les actualités du dojo et partager notre passion.</p>
-                    <a href="https://www.facebook.com/groups/nijikendoka" target="_blank" class="btn-primary"
-                        style="background-color: #1877F2;">
-                        <i class="fab fa-facebook-f mr-3"></i> Rejoindre le groupe
-                    </a>
-                </div>
+            <div class="mt-12 p-8 bg-white border border-[var(--color-yellow)] text-center max-w-3xl mx-auto reveal">
+                <p class="text-lg font-medium">
+                    <i class="fas fa-users-cog mr-2 text-[var(--color-yellow)]"></i>
+                    Tarif dégressif pour les familles : <span class="font-bold">-50% sur le 2ème enfant</span>,
+                    cotisation offerte dès le 3ème.
+                </p>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Contact & Map -->
-        <section id="contact" class="py-32 bg-[var(--color-bg-tertiary)] border-t border-[var(--color-border)]">
-            <div class="container mx-auto px-6">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
-                    <!-- Contact & Registration -->
-                    <div class="reveal">
-                        <h2 class="section-title">Inscription & Contact</h2>
-                        <div class="bg-white p-8 mb-8 border border-[var(--color-border)]">
-                            <h3 class="text-xl font-bold mb-4 uppercase tracking-widest text-[var(--color-cyan)]">Pièces
-                                à fournir</h3>
-                            <ul class="space-y-3 text-[var(--color-text-secondary)]">
-                                <li><i class="fas fa-check mr-2 text-[var(--color-yellow)]"></i> Certificat médical</li>
-                                <li><i class="fas fa-check mr-2 text-[var(--color-yellow)]"></i> Photo d'identité</li>
-                                <li><i class="fas fa-check mr-2 text-[var(--color-yellow)]"></i> Autorisation parentale
-                                </li>
-                                <li><i class="fas fa-check mr-2 text-[var(--color-yellow)]"></i> Règlement</li>
-                            </ul>
-                        </div>
-                        <div class="mb-10 p-6 bg-[var(--color-bg-secondary)] border-l-4 border-[var(--color-cyan)]">
-                            <p class="text-lg font-bold">Jordan MOHAMAD</p>
-                            <p class="text-[var(--color-cyan)]"><i class="fas fa-phone mr-2"></i> 06.61.29.60.91</p>
-                        </div>
-                        <form id="contact-form" class="space-y-8">
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                                <div>
-                                    <label
-                                        class="block text-xs uppercase tracking-widest text-[var(--color-text-secondary)] font-bold mb-3">Nom
-                                        complet</label>
-                                    <input type="text" name="name" required class="w-full px-5 py-4 transition-all">
-                                </div>
-                                <div>
-                                    <label
-                                        class="block text-xs uppercase tracking-widest text-[var(--color-text-secondary)] font-bold mb-3">Email</label>
-                                    <input type="email" name="email" required class="w-full px-5 py-4 transition-all">
-                                </div>
+    <!-- Facebook CTA -->
+    <section id="community" class="py-32 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <div
+                class="max-w-4xl mx-auto p-12 border border-[var(--color-border)] bg-[var(--color-bg-secondary)] reveal">
+                <i class="fab fa-facebook text-5xl text-[#1877F2] mb-6"></i>
+                <h2 class="text-3xl font-japanese font-bold mb-4 text-[var(--color-text-primary)]">Follow our
+                    community
+                </h2>
+                <p class="text-lg text-[var(--color-text-secondary)] mb-10">Rejoignez notre groupe Facebook pour
+                    suivre
+                    les actualités du dojo et partager notre passion.</p>
+                <a href="https://www.facebook.com/groups/nijikendoka" target="_blank" class="btn-primary"
+                    style="background-color: #1877F2;">
+                    <i class="fab fa-facebook-f mr-3"></i> Rejoindre le groupe
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Map -->
+    <section id="contact" class="py-32 bg-[var(--color-bg-tertiary)] border-t border-[var(--color-border)]">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+                <!-- Contact & Registration -->
+                <div class="reveal">
+                    <h2 class="section-title">Inscription & Contact</h2>
+                    <div class="bg-white p-8 mb-8 border border-[var(--color-border)]">
+                        <h3 class="text-xl font-bold mb-4 uppercase tracking-widest text-[var(--color-cyan)]">Pièces
+                            à fournir</h3>
+                        <ul class="space-y-3 text-[var(--color-text-secondary)]">
+                            <li><i class="fas fa-check mr-2 text-[var(--color-yellow)]"></i> Certificat médical</li>
+                            <li><i class="fas fa-check mr-2 text-[var(--color-yellow)]"></i> Photo d'identité</li>
+                            <li><i class="fas fa-check mr-2 text-[var(--color-yellow)]"></i> Autorisation parentale
+                            </li>
+                            <li><i class="fas fa-check mr-2 text-[var(--color-yellow)]"></i> Règlement</li>
+                        </ul>
+                    </div>
+                    <div class="mb-10 p-6 bg-[var(--color-bg-secondary)] border-l-4 border-[var(--color-cyan)]">
+                        <p class="text-lg font-bold">Jordan MOHAMAD</p>
+                        <p class="text-[var(--color-cyan)]"><i class="fas fa-phone mr-2"></i> 06.61.29.60.91</p>
+                    </div>
+                    <form id="contact-form" class="space-y-8">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div>
+                                <label
+                                    class="block text-xs uppercase tracking-widest text-[var(--color-text-secondary)] font-bold mb-3">Nom
+                                    complet</label>
+                                <input type="text" name="name" required class="w-full px-5 py-4 transition-all">
                             </div>
                             <div>
                                 <label
-                                    class="block text-xs uppercase tracking-widest text-[var(--color-text-secondary)] font-bold mb-3">Votre
-                                    message</label>
-                                <textarea name="message" rows="4" required
-                                    class="w-full px-5 py-4 transition-all"></textarea>
+                                    class="block text-xs uppercase tracking-widest text-[var(--color-text-secondary)] font-bold mb-3">Email</label>
+                                <input type="email" name="email" required class="w-full px-5 py-4 transition-all">
                             </div>
-                            <button type="submit" class="btn-primary w-full md:w-auto">Envoyer le message</button>
-                        </form>
-                    </div>
-
-                    <!-- Google Maps (Day Mode) -->
-                    <div class="reveal">
-                        <h2 class="section-title">Localisation</h2>
-                        <div class="mt-10 h-[500px] border border-[var(--color-border)] shadow-sm bg-white p-2">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2613.6826622434683!2d2.3831861761456253!3d49.007137812260485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6691459ee82b7%3A0xe54d3e580a676f45!2sGymnase%20Pierre%20de%20Coubertin!5e0!3m2!1sfr!2sfr!4v1714574829321!5m2!1sfr!2sfr"
-                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                         </div>
+                        <div>
+                            <label
+                                class="block text-xs uppercase tracking-widest text-[var(--color-text-secondary)] font-bold mb-3">Votre
+                                message</label>
+                            <textarea name="message" rows="4" required
+                                class="w-full px-5 py-4 transition-all"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary w-full md:w-auto">Envoyer le message</button>
+                    </form>
+                </div>
+
+                <!-- Google Maps (Day Mode) -->
+                <div class="reveal">
+                    <h2 class="section-title">Localisation</h2>
+                    <div class="mt-10 h-[500px] border border-[var(--color-border)] shadow-sm bg-white p-2">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2613.6826622434683!2d2.3831861761456253!3d49.007137812260485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6691459ee82b7%3A0xe54d3e580a676f45!2sGymnase%20Pierre%20de%20Coubertin!5e0!3m2!1sfr!2sfr!4v1714574829321!5m2!1sfr!2sfr"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Footer -->
-        <footer class="py-16 bg-white border-t border-[var(--color-border)]">
-            <div class="container mx-auto px-6 flex flex-col items-center">
-                <a href="#" class="text-xl font-japanese font-bold tracking-tight mb-8">NIJI <span
-                        class="text-[var(--color-cyan)]">KENDOKA</span></a>
-                <div class="flex space-x-8 mb-10">
-                    <a href="#" class="text-gray-400 hover:text-[var(--color-cyan)] transition-colors text-lg"><i
-                            class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="text-gray-400 hover:text-[var(--color-cyan)] transition-colors text-lg"><i
-                            class="fab fa-instagram"></i></a>
-                    <a href="#" class="text-gray-400 hover:text-[var(--color-cyan)] transition-colors text-lg"><i
-                            class="fab fa-twitter"></i></a>
-                </div>
-                <p class="text-xs text-gray-400 tracking-[0.2em] uppercase">
-                    &copy; 2026 Niji Kendoka. Excellence in the Way of the Sword.
-                </p>
+    <!-- Footer -->
+    <footer class="py-16 bg-white border-t border-[var(--color-border)]">
+        <div class="container mx-auto px-6 flex flex-col items-center">
+            <a href="#" class="text-xl font-japanese font-bold tracking-tight mb-8">NIJI <span
+                    class="text-[var(--color-cyan)]">KENDOKA</span></a>
+            <div class="flex space-x-8 mb-10">
+                <a href="#" class="text-gray-400 hover:text-[var(--color-cyan)] transition-colors text-lg"><i
+                        class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-gray-400 hover:text-[var(--color-cyan)] transition-colors text-lg"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="#" class="text-gray-400 hover:text-[var(--color-cyan)] transition-colors text-lg"><i
+                        class="fab fa-twitter"></i></a>
             </div>
-        </footer>
+            <p class="text-xs text-gray-400 tracking-[0.2em] uppercase">
+                &copy; 2026 Niji Kendoka. Excellence in the Way of the Sword.
+            </p>
+        </div>
+    </footer>
 
-        <!-- Scripts -->
-        <script src="script.js"></script>
+    <!-- Scripts -->
+    <script src="script.js"></script>
 </body>
 
 </html>

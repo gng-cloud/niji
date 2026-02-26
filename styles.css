@@ -340,6 +340,81 @@ nav.scrolled {
   font-size: 0.875rem;
 }
 
+/* Disciplines Section */
+.discipline-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin-bottom: 8rem;
+  align-items: center;
+}
+
+.discipline-row:last-child {
+  margin-bottom: 0;
+}
+
+.discipline-image {
+  width: 100%;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+}
+
+.discipline-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.discipline-row:hover .discipline-image img {
+  transform: scale(1.05);
+}
+
+.discipline-text {
+  width: 100%;
+}
+
+.discipline-list {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.discipline-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.discipline-list-item i {
+  color: var(--color-cyan);
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+}
+
+@media (min-width: 1024px) {
+  .discipline-row {
+    flex-direction: row;
+    gap: 8rem;
+  }
+
+  .discipline-row:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .discipline-image,
+  .discipline-text {
+    width: 50%;
+  }
+
+  .discipline-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 /* Forms */
 input,
 textarea {
