@@ -93,6 +93,12 @@ nav {
     color: var(--color-text-main);
 }
 
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+}
+
 nav.scrolled {
     top: 0;
     width: 100%;
@@ -387,7 +393,30 @@ footer {
 
     nav {
         width: 95%;
-        padding: 0.8rem 1.2rem;
+        padding: 0.8rem 1rem;
+    }
+
+    .nav-brand {
+        gap: 0.5rem;
+    }
+
+    .nav-logo {
+        height: 35px;
+    }
+
+    .nav-text {
+        display: none;
+    }
+
+    .nav-links {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    .nav-link {
+        font-size: 0.75rem;
+        letter-spacing: 0.05em;
     }
 
     .section-title {
