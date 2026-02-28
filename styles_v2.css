@@ -276,6 +276,10 @@ section {
     grid-column: span 8;
 }
 
+.col-3 {
+    grid-column: span 3;
+}
+
 .col-12 {
     grid-column: span 12;
 }
@@ -383,6 +387,7 @@ footer {
 
     .col-6,
     .col-4,
+    .col-3,
     .col-8 {
         grid-column: span 12;
     }
