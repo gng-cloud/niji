@@ -43,14 +43,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 4. Contact Form Premium Logic
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            // In a real scenario, handle fetch/email logic
-            alert('Merci ! Votre demande a été reçue. (Mode simulation premium)');
-            contactForm.reset();
-        });
-    }
 });
