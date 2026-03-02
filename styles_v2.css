@@ -382,6 +382,33 @@ footer {
     text-align: center;
 }
 
+/* Tablet Adjustments */
+@media (max-width: 1200px) {
+    nav {
+        width: 95%;
+        padding: 0.8rem 1.5rem;
+    }
+    .nav-links {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    nav {
+        padding: 0.8rem 1rem;
+    }
+    .nav-links {
+        gap: 1.2rem;
+    }
+    .nav-link {
+        font-size: 0.8rem;
+        letter-spacing: 0.05em;
+    }
+    .nav-text {
+        font-size: 1.1rem;
+    }
+}
+
 /* Mobile Adjustments */
 @media (max-width: 768px) {
 
