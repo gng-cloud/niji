@@ -264,6 +264,55 @@ section {
     box-shadow: 0 20px 40px rgba(212, 175, 55, 0.1);
 }
 
+/* Teacher Section Specific Styles */
+.teacher-image-container {
+    width: calc(100% + 5rem);
+    margin: -2.5rem -2.5rem 2rem -2.5rem;
+    height: 320px;
+    overflow: hidden;
+    border-radius: 12px 12px 0 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.teacher-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 15%;
+    /* Fix for cut heads, focusing slightly higher */
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bento-item:hover .teacher-photo {
+    transform: scale(1.08);
+}
+
+.team-images-container {
+    width: calc(100% + 5rem);
+    margin: -2.5rem -2.5rem 2rem -2.5rem;
+    height: 320px;
+    display: flex;
+    gap: 2px;
+    background: rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    border-radius: 12px 12px 0 0;
+}
+
+.team-photo-sm {
+    flex: 1;
+    min-width: 0;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+    transition: flex 0.6s cubic-bezier(0.4, 0, 0.2, 1), filter 0.3s ease;
+    filter: grayscale(20%);
+}
+
+.team-photo-sm:hover {
+    flex: 2.5;
+    filter: grayscale(0%);
+}
+
 .col-6 {
     grid-column: span 6;
 }
@@ -388,6 +437,7 @@ footer {
         width: 95%;
         padding: 0.8rem 1.5rem;
     }
+
     .nav-links {
         gap: 1.5rem;
     }
@@ -397,13 +447,16 @@ footer {
     nav {
         padding: 0.8rem 1rem;
     }
+
     .nav-links {
         gap: 1.2rem;
     }
+
     .nav-link {
         font-size: 0.8rem;
         letter-spacing: 0.05em;
     }
+
     .nav-text {
         font-size: 1.1rem;
     }
