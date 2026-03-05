@@ -533,38 +533,70 @@ footer {
     }
 
     .bento-item {
-        padding: 1.5rem;
+        padding: 1.5rem !important;
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
     }
 
-    /* Mobile Teacher Adjustments */
-    .teacher-image-container,
-    .team-images-container {
-        height: 220px;
-        width: calc(100% + 3rem);
-        margin: -1.5rem -1.5rem 1.5rem -1.5rem;
+    /* Teacher Photos Container */
+    .teacher-image-container {
+        height: 200px !important;
+        width: calc(100% + 3rem) !important;
+        margin: -1.5rem -1.5rem 1.5rem -1.5rem !important;
+        overflow: hidden !important;
     }
 
+    /* Pedagogical Team specific: 3 photos always visible */
     .team-images-container {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        gap: 2px;
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        height: 180px !important;
+        width: calc(100% + 3rem) !important;
+        margin: -1.5rem -1.5rem 1.5rem -1.5rem !important;
+        gap: 1px !important;
+        overflow: hidden !important;
     }
 
     .team-photo-sm {
-        flex: 0 0 75%;
-        filter: grayscale(0%);
+        width: 100% !important;
+        height: 100% !important;
+        opacity: 1 !important;
+        filter: grayscale(0%) !important;
+        object-fit: cover !important;
+        object-position: center 20% !important;
     }
 
-    .team-photo-sm:hover {
-        flex: 0 0 75%;
+    /* Force Title and Text Centering */
+    .bento-item h3,
+    .bento-item p {
+        text-align: center !important;
+        width: 100% !important;
+    }
+
+    .bento-item ul {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        padding: 0 !important;
+        margin: 1rem auto !important;
+        list-style: none !important;
+        width: 100% !important;
+    }
+
+    .bento-item li {
+        text-align: left !important;
+        width: fit-content !important;
+        margin-bottom: 0.5rem !important;
     }
 
     /* Responsive Table Fix */
     .table-wrap {
-        margin: 0 -1.5rem;
-        border-radius: 0;
-        border-left: none;
-        border-right: none;
+        margin: 0 -1.5rem !important;
+        border-radius: 0 !important;
+        border-left: none !important;
+        border-right: none !important;
     }
 
     table {
