@@ -548,10 +548,10 @@ footer {
         overflow: hidden !important;
     }
 
-    /* Pedagogical Team specific: 3 photos always visible */
+    /* Pedagogical Team specific: 4 photos always visible */
     .team-images-container {
         display: grid !important;
-        grid-template-columns: repeat(3, 1fr) !important;
+        grid-template-columns: repeat(4, 1fr) !important;
         height: 180px !important;
         width: calc(100% + 3rem) !important;
         margin: -1.5rem -1.5rem 1.5rem -1.5rem !important;
